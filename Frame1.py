@@ -128,7 +128,7 @@ class NumberFilter(wx.Frame):
                             
                 self.textCtrl2.SetValue(self.textCtrl2.GetValue() + "\n")
                 
-        
+        self.textCtrl2.SetValue(self.textCtrl2.GetValue().strip()[:-1] + "*")
         event.Skip()
 
 
