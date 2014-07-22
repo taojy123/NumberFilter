@@ -93,6 +93,7 @@ class Line(object):
         return len(self.line_singles)
 
     def remove(self, comb):
+        print self.combs, "-", comb
         self.combs.remove(comb)
         if self.count == 4:
             self.result4 = self.line_singles
@@ -127,11 +128,12 @@ class Line(object):
             self.remove("-")
 
     def filter2(self):
-        for comb in self.combs:
+        flag = True
+        for comb in self.combs[:]:
             if not self.is_repeat(comb):
                 self.remove(comb)
-                return
-        if self.combs:
+                flag = False
+        if flag and self.combs:
             self.remove(self.combs[0])
 
     def get_result(self):
@@ -157,6 +159,17 @@ if __name__ == "__main__":
     08   05   04   06   09
     08   11   09   02   07
     06   04   11   09   08"""
+
+    input_str = """06   05   11   01   02
+09   04   06   07   08
+07   05   04   03   10
+04   02   01   08   11
+05   01   02   04   08
+11   03   08   10   04
+07   03   11   08   06
+05   11   01   03   08
+09   04   03   10   05
+09   03   06   05   10"""
 
     n = Numbers(input_str)
 
