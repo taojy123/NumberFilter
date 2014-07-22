@@ -17,12 +17,12 @@ class NumberFilter(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_NUMBERFILTER, name='NumberFilter',
-              parent=prnt, pos=wx.Point(204, 184), size=wx.Size(826, 401),
+              parent=prnt, pos=wx.Point(204, 184), size=wx.Size(926, 401),
               style=wx.DEFAULT_FRAME_STYLE, title='NumberFilter')
-        self.SetClientSize(wx.Size(810, 363))
+        self.SetClientSize(wx.Size(910, 363))
 
         self.panel1 = wx.Panel(id=wxID_NUMBERFILTERPANEL1, name='panel1',
-              parent=self, pos=wx.Point(0, 0), size=wx.Size(810, 363),
+              parent=self, pos=wx.Point(0, 0), size=wx.Size(910, 363),
               style=wx.TAB_TRAVERSAL)
         self.panel1.SetToolTipString('')
 
@@ -34,7 +34,7 @@ class NumberFilter(wx.Frame):
 
         self.textCtrl2 = wx.TextCtrl(id=wxID_NUMBERFILTERTEXTCTRL2,
               name='textCtrl2', parent=self.panel1, pos=wx.Point(200, 64),
-              size=wx.Size(584, 216), style=wx.TE_MULTILINE, value='')
+              size=wx.Size(684, 216), style=wx.TE_MULTILINE, value='')
         self.textCtrl2.SetToolTipString('')
 
         self.button1 = wx.Button(id=wxID_NUMBERFILTERBUTTON1,
