@@ -18,7 +18,7 @@ class Numbers(object):
         lines = []
         for i in range(len(self.data[0])-1):
             for j in range(i+1, len(self.data[0])):
-                mark = "%d %d" % (i, j)
+                mark = "%d %d" % (i+1, j+1)
                 combs = []
                 for row in self.data:
                     comb = Comb(row[i], row[j])
@@ -31,9 +31,9 @@ class Numbers(object):
         result_str = ""
         for line in self.lines:
             result4, result3, result2 = line.get_result()
-            result_str += "%s:    %s  |  %s    %s    %s\n" % (line.mark, str(line), result4, result3, result2)
+            result_str += "%s:    %s    %s    %s\n" % (line.mark, result4, result3, result2)
         result_str = result_str.strip()
-        return result_str[:-2] + "**" 
+        return result_str#[:-2] + "**" 
 
 
 
@@ -93,7 +93,7 @@ class Line(object):
         return len(self.line_singles)
 
     def remove(self, comb):
-        print self.combs, "-", comb
+        #print self.combs, "-", comb
         self.combs.remove(comb)
         if self.count == 4:
             self.result4 = self.line_singles
